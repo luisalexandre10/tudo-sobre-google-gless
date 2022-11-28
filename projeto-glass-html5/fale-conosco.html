@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tudo sobre google Glass</title>
+        <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="_css/form.css" >
+        <script language="javascript" src="_javascript/funcoes.js"> </script>
+    </head>
+    <body>
+        <div id="interface"> 
+        <header id="cabecalho">
+        <hgroup id="topo"> 
+        <h1>Google Glass</h1>
+        <h2>A revolução do Google está chegando</h2>
+        </hgroup>
+
+        <img id="icone" src="_imagens/contato.png" alt="20">
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+            <ul type="disc"> 
+                <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+                <li onmouseover=" mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+                <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+                <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+                <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale-conosco</a></li>          
+                
+            </ul>
+        </nav>
+    </header>
+            <section id="corpo-full">
+                <article id="noticia-principal">
+                    <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h3>Glass > Especificações</h3>
+                            <h1>Raio-X no Google Glass</h1>
+                            <h2>por Luis Alexandre Padilha</h2>
+                            <h3 class="direita">Atualizado em 19/Outubro/2022</h3>
+                        </hgroup>
+                    </header>
+<h1>Fale Conosco > Contato</h1>
+<h2>
+    Formulário de Contato
+    por Luis Alexandre Padilha
+    Atualizado em 19/Outubro/2022
+</h2>
+</hgroup>
+<form method="post" id="fcontato" action="luismattleyla666@gmail.com" oninput="ctotal.value=parseInt(cquantidade.value)*1500">
+    <fieldset id="usuario">
+        <legend>Identificação do Usuário</legend>
+            <hgroup id="topo">
+            <p><label for="cname">nome:</label><input type="text" name="cnome" id="tname" size="20" maxlength="30" placeholder="NOME COMPLETO" ></p>
+                <p><label for="csenha">Senha:</label><input type="password" name="csenha" id="tsena" size="8" maxlength="8" placeholder="8 digitos"></p>
+            </hgroup>
+            <p><label for="cemail">E-mail:</label><input type="email" name="cemail" id="temail" size="20" max="40" placeholder="Separe por virgulas"></p>
+        <fieldset id="sexo">
+            <legend>Sexo</legend>
+                <input type="radio" name="tsexo" id="cmasc"><label for="cmasc">Masculino</label><br>
+                <input type="radio" name="tsexo" id="cfem"><label for="cfem">Feminino</label>
+            </fieldset>
+                <p><label for="cnascimento">Data de Nascimento:</label><input type="date" name="cnascimento" id="tnascimento"></p>
+    </fieldset>
+
+    <fieldset id="endereco">
+        <legend id="endereco">Endereço do Usuário</legend>
+            
+        <p><label for="clogradouro">Logradouro:</label>
+            <input type="text" name="tlogradouro" id="clogradouro" size="15" maxlength="30" placeholder="Rua, AV, Travessia, ..."><label for="cnum">Numero:</label><input type="number" name="cnum" id="tnum" min="0" max="99999"></p>
+        <p></p>
+        <p>Estado: <select name="estado" id="testado">
+            <optgroup label="Região Sudeste">
+                <option value="rj">RIO DE JANEIRO</option>
+                <option value="sp">SÃO PAULO</option>
+                <option value="mg">MINAS GERAIS</option>
+            </optgroup>
+            <optgroup label="Região Sul">
+                <option value="pr" selected>PARANA</option>
+            </optgroup>
+        </select></p>
+        <p><label for="ccidade">Cidade</label><input type="text" name="ccidade" id="tcidade" size="20" maxlength="30" placeholder="Sua cidade" list="cidades"></p>
+        <datalist id="cidades">
+            <option value="rio de janeiro"></option>
+            <option value="rio negro"></option>
+            <option value="curitiba"></option>
+
+        </datalist>
+
+    </fieldset>
+
+    <fieldset id="mens">
+        <legend id="mensagem">Mensagem do Usuário</legend>
+            <p>Grau de Urgência:Min<input type="range" name="curgencia" id="turgencia" min="0"
+                max="10" step="2">Máx</p>
+            <p><label for="cmensagem">Mensagem:</label>
+            <textarea name="tmensagem" id="cmensagem" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+    </fieldset>
+
+    <fieldset id="pedido">
+        <legend >Quero um Google Glass</legend>
+            <p><input type="checkbox" name="tped" id="cped">
+            <label for="cped">Gostaria de adquirir um Google Glass quando disponível</label></p>
+            <p><label for="ccor">cor</label>
+            <input type="color" name="tcor" id="ccor"></p>
+            <p><label for="cquantidade">Quantidade:</label><input type="number" name="tquantidade" id="cquantidade" placeholder="0"></p>
+            <p><label for="ctotal">Preço Total R$</label>
+            <input type="number" name="tpreço" id="ctotal" placeholder="Total a pagar"></p>
+    </fieldset>
+        <input type="image" value="Enviar" name="cadastro" src="_imagens/botao-enviar.png" ><br><br>
+    </form>
+<footer id="rodape">
+    <p>
+        Copyright &copy; 2022 - by Luis Alexandre Padilha <br>
+        <a href="https://www.facebook.com/" target="_blank">Facebook</a> | 
+        <a href="https://twitter.com/" target="_blank">Twitter</a>
+    </p>
+</footer>
+</div>    
+</body>
+</html>
